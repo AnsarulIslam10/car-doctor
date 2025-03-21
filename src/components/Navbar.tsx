@@ -45,6 +45,10 @@ const Navbar = () => {
         <button className="cursor-pointer">
           <IoIosSearch className="size-6 mr-4 text-[#444444]" />
         </button>
+        <div className="space-x-3">
+        <Link href={"/register"}>Register</Link>
+        <Link href={"/login"}>Login</Link>
+        </div>
         <Link
           href={"/appointment"}
           className="btn btn-outline rounded-none text-red-500"

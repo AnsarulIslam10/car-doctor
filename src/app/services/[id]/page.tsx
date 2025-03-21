@@ -5,7 +5,7 @@ import Image from "next/image";
 const ServiceDetails = async ({ params }: { params: { id: string } }) => {
   const p = await params;
   const data = await dbConnect("services").findOne({ _id: new ObjectId(p.id) });
-
+console.log(data)
   return (
     <div>
       <section>
@@ -35,6 +35,8 @@ const ServiceDetails = async ({ params }: { params: { id: string } }) => {
           height={400}
           className="rounded-md"
         ></Image>
+        <h1 className="text-5xl font-semibold mt-6">{data?.title}</h1>
+        <p>{data?.description}</p>
       </section>
     </div>
   );

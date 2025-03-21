@@ -1,5 +1,9 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
-
+export const collectionNamesObj = {
+    servicesCollection: "services",
+    userCollection: "users",
+    bookingCollection: "booking"
+}
 export default function dbConnect(collectionName: string) {
     const uri: string = process.env.MONGODB_URI ?? ""; // Provide a fallback empty string
 
